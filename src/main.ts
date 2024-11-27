@@ -2,6 +2,7 @@ import {
   getBooleanInput,
   getInput,
   getMultilineInput,
+  info,
   setFailed,
   warning
 } from '@actions/core'
@@ -67,7 +68,7 @@ async function run(): Promise<void> {
     )
     return
   }
-
+  info(`Github Event Name: ${process.env.GITHUB_EVENT_NAME}`)
   try {
     // check if the event is pull_request
     if (
