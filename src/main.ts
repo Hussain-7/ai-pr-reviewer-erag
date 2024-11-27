@@ -1,43 +1,44 @@
 import {
-  getBooleanInput,
-  getInput,
-  getMultilineInput,
+  // getBooleanInput,
+  // getInput,
+  // getMultilineInput,
   info,
   warning
   // setFailed,
 } from '@actions/core'
 // import {Bot} from './bot'
-import {
-  // OpenAIOptions,
-  Options
-} from './options'
+// import {
+// OpenAIOptions,
+// Options
+// } from './options'
 // import {Prompts} from './prompts'
 // import {codeReview} from './review'
 // import {handleReviewComment} from './review-comment'
 
 async function run(): Promise<void> {
-  const options: Options = new Options(
-    getBooleanInput('debug'),
-    getBooleanInput('disable_review'),
-    getBooleanInput('disable_release_notes'),
-    getInput('max_files'),
-    getBooleanInput('review_simple_changes'),
-    getBooleanInput('review_comment_lgtm'),
-    getMultilineInput('path_filters'),
-    getInput('system_message'),
-    getInput('openai_light_model'),
-    getInput('openai_heavy_model'),
-    getInput('openai_model_temperature'),
-    getInput('openai_retries'),
-    getInput('openai_timeout_ms'),
-    getInput('openai_concurrency_limit'),
-    getInput('github_concurrency_limit'),
-    getInput('openai_base_url'),
-    getInput('language')
-  )
+  info('starting run function')
+  // const options: Options = new Options(
+  //   getBooleanInput('debug'),
+  //   getBooleanInput('disable_review'),
+  //   getBooleanInput('disable_release_notes'),
+  //   getInput('max_files'),
+  //   getBooleanInput('review_simple_changes'),
+  //   getBooleanInput('review_comment_lgtm'),
+  //   getMultilineInput('path_filters'),
+  //   getInput('system_message'),
+  //   getInput('openai_light_model'),
+  //   getInput('openai_heavy_model'),
+  //   getInput('openai_model_temperature'),
+  //   getInput('openai_retries'),
+  //   getInput('openai_timeout_ms'),
+  //   getInput('openai_concurrency_limit'),
+  //   getInput('github_concurrency_limit'),
+  //   getInput('openai_base_url'),
+  //   getInput('language')
+  // )
 
   // print options
-  options.print()
+  // options.print()
 
   // const prompts: Prompts = new Prompts(
   //   getInput('summarize'),
