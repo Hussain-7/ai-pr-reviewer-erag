@@ -30,6 +30,9 @@ export const codeReview = async (
   options: Options,
   prompts: Prompts
 ): Promise<void> => {
+  info(`Context Received in codeReview fn: ${JSON.stringify(context)}`)
+  info(`Options Received in codeReview fn: ${JSON.stringify(options)}`)
+  info(`Prompts Received in codeReview fn: ${JSON.stringify(prompts)}`)
   const commenter: Commenter = new Commenter()
 
   const openaiConcurrencyLimit = pLimit(options.openaiConcurrencyLimit)
